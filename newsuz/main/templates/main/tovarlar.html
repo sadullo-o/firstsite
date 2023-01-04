@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Bizning mahsulotlar
+{% endblock %}
+
+{% block body %}
+
+
+<h1>Bizning mahsulotlar</h1>
+
+<ul>
+    <li><a href="{% url 'detail' 'olma' %}">Olma</a></li>
+    <li><a href="{% url 'detail' 'anor' %}">Anor</a></li>
+    <li><a href="{% url 'detail' 'behi' %}">Behi</a></li>
+    <li><a href="{% url 'detail' 'nok' %}">Nok</a></li>
+
+</ul>
+
+{% endblock %}

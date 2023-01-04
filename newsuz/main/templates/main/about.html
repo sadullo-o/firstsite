@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Biz haqimizda
+{% endblock %}
+
+{% block body %}
+
+{% for i in talabalar %}
+<h2>
+  {{i}}
+</h2>
+
+{% endfor %}
+
+<h1>Bizning Universitet {{univer}}</h1>
+
+
+{% endblock %}
+
+
+
+{% block js %}
+<script>
+    window.alert('Salom')
+</script>
+{% endblock %}
