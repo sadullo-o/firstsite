@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from .models import Yangiliklar, Info
 import datetime
 
 # Create your views here.
@@ -9,24 +9,32 @@ import datetime
 # frontend bilan boglaydigan kodlar shu yerda yoziladi
 
 def asosiy(request):
+    news = Yangiliklar.objects.all()
+    context = {
+        'news': news
+    }
 
-    return render(request, 'main/index.html')
+    return render(request, 'main/index.html', context)
 
 
 def about(request):
-    talabalar = ['Ali', 'Rustam', 'Hasan', 'Husan']
-    # malumotlarni views dan templatega uzatish uchun
+    infos = Info.objects.all()
+
     context = {
-        'talabalar': talabalar,
-        'univer': 'TUIT'
+        'info': infos
     }
 
     return render(request, 'main/about.html', context)
 
 
 def tovarlar(request):
+    contacts = Info.objects.all()
 
-    return render(request, 'main/tovarlar.html')
+    contex = {
+        'contacts': contacts
+    }
+
+    return render(request, 'main/tovarlar.html', contex)
 
 def details(request, pk):
     context = {

@@ -6,7 +6,7 @@ Bizning mahsulotlar
 
 {% block body %}
 
-
+<div class="container">
 <h1>Bizning mahsulotlar</h1>
 
 <ul>
@@ -16,5 +16,11 @@ Bizning mahsulotlar
     <li><a href="{% url 'detail' 'nok' %}">Nok</a></li>
 
 </ul>
+
+
+<h3>{{contacts.1.title}}</h3>
+<pre>{{contacts.1.info}}</pre>
+</div>
+
 
 {% endblock %}
