@@ -10,6 +10,14 @@ Biz haqimizda
 <h3>{{info.0.info}}</h3>
 <p>{{info.0.created_at}}</p>
 
+
+<h1>Saytimiz haqida fikrlar: </h1>
+{% for i in fikrlar %}
+    <h3>{{i.ism}}</h3>
+    <p>{{i.fikr}}</p>
+    <i>{{i.vaqt}}</i>
+{% endfor %}
+
 {% endblock %}
 
 

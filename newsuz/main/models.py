@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 
 # Create your models here.
@@ -7,6 +9,10 @@ from django.db import models
 class Yangiliklar(models.Model):
     title = models.CharField(max_length=100)
     body = models.TextField()
+    type = models.CharField(max_length=50, default='')
+
+# mahalliy
+# dunyo
 
     def __str__(self):
         return self.title
@@ -30,6 +36,25 @@ class Info(models.Model):
         verbose_name_plural = 'Infos'
 
 
+
+
+class Contact(models.Model):
+    ism = models.CharField(max_length=50)
+    mavzu = models.CharField(max_length=50)
+    matn = models.TextField()
+    vaqt = models.DateTimeField(default=datetime.datetime.now())
+
+    def __str__(self):
+        return self.ism
+
+
+class Fikr(models.Model):
+    ism = models.CharField(max_length=50)
+    fikr = models.TextField()
+    vaqt = models.DateTimeField(default=datetime.datetime.now())
+
+    def __str__(self):
+        return self.ism
 
 # 1. python manage.py makemigrations
 

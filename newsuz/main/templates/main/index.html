@@ -29,6 +29,9 @@ Asosiy sahifa
 </div>
 
 <div class="container">
+  <a href="{% url 'news' 'mahalliy' %}">Mahalliy yangiliklar</a>
+  <a href="{% url 'news' 'dunyo' %}">Dunyoviy yangiliklar</a>
+
 
   <div class="row">
 {% for i in news %}
@@ -46,6 +49,34 @@ Asosiy sahifa
 
 </div>
 
+
+<div class="container">
+  <form method="post">
+    {% csrf_token %}
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">Ism</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="ism" placeholder="Ismingiz..">
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Fikr</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="fikr" placeholder="Fikringizni yozing.." style="height:200px"></textarea>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <input type="submit" value="Send">
+  </div>
+  </form>
+</div>
 
 {% endblock %}
 
