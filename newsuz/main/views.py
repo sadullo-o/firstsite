@@ -96,3 +96,4 @@ def contact(request):
 
 # o'zingiz haqingizda sayt
 # Main, MyProjects, About Me, Contact
+# test uchun
