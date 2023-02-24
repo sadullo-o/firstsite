@@ -97,3 +97,55 @@ def contact(request):
 # o'zingiz haqingizda sayt
 # Main, MyProjects, About Me, Contact
 # test uchun
+
+
+
+
+
+
+
+
+
+
+
+
+
+# benzin va gaz zapravkalari xaritasi, ---> Toshkent   Samarqand   Buxoro   Jizzax   Andijon
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Tekshirish
